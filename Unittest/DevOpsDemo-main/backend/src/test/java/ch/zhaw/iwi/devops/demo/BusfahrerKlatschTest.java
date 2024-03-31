@@ -11,7 +11,7 @@ public class BusfahrerKlatschTest {
     @Test
     public void zweiBusfahrerTreffenSichAnErsterHaltestelle() {
         BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
-        int[][] buslinien = {{1, 2, 3}, {1, 4, 5}};
+        int[][] buslinien = {{1, 2, 3}, {1, 8, 5}};
         assertEquals("1", klatsch.berechneAustauschDauer(buslinien));
     }  
 }
