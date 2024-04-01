@@ -85,5 +85,17 @@ public class BusfahrerKlatschTest {
         assertEquals("2", klatsch.berechneAustauschDauer(buslinien));
     } 
 
+    @Test
+    public void Geschickten_bekannt() {
+        BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
+        int[][] buslinien = {{1, 4, 7}, {1, 4, 6}, {1, 4, 7}};
+        // Annahme: Die Methode gibt die Runde zurück, in der der letzte Austausch stattfindet,
+        // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
+        assertEquals("1", klatsch.berechneAustauschDauer(buslinien));
+    } 
+
+
+
+
 
 }
