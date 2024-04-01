@@ -30,4 +30,13 @@ public class BusfahrerKlatschTest {
         // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
         assertEquals("Kein Austausch möglich", klatsch.berechneAustauschDauer(buslinien));
     }  
+
+    @Test
+    public void busfahrerTauschenGeschichtenNachmehrerenDurchläufenaus() {
+        BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
+        int[][] buslinien = {{1, 4, 7}, {2, 4, 6}, {3, 5, 9}};
+        // Annahme: Die Methode gibt die Runde zurück, in der der letzte Austausch stattfindet,
+        // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
+        assertEquals("5", klatsch.berechneAustauschDauer(buslinien));
+    } 
 }
