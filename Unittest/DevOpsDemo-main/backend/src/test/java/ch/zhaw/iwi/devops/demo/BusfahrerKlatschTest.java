@@ -103,7 +103,14 @@ public class BusfahrerKlatschTest {
         assertEquals("3", klatsch.berechneAustauschDauer(buslinien));
     } 
 
-
+    @Test
+    public void Linien_Nichtgleich_Lang() {
+        BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
+        int[][] buslinien = {{3, 1, 2, 8}, {3, 2, 3}, {4, 2, 7, 8}};
+        // Annahme: Die Methode gibt die Runde zurück, in der der letzte Austausch stattfindet,
+        // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
+        assertEquals("4", klatsch.berechneAustauschDauer(buslinien));
+    } 
 
 
 
