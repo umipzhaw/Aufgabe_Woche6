@@ -52,6 +52,10 @@ public class BusfahrerKlatsch {
                 if (alleInfosGeteilt) {
                     return String.valueOf(station);
                 }
+
+                if (station == 480) { // Fügt die Überprüfung hinzu, ob 480 Durchläufe erreicht wurden
+                    return "Zeitüberschreitung";  
+                }
             }
         }
         return "Kein Austausch möglich";
