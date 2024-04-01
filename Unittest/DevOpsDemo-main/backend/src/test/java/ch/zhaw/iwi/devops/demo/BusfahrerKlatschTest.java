@@ -9,11 +9,11 @@ public class BusfahrerKlatschTest {
     @Test
     public void zweiBusfahrerTreffenSichAnErsterHaltestelle() {
         BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
-        int[][] buslinien = {{1, 2, 3}, {1, 8, 5}};
-        assertEquals("1", klatsch.berechneAustauschDauer(buslinien));
+        int[][] buslinien = {{7, 2, 5}, {1, 8, 5}};
+        assertEquals("3", klatsch.berechneAustauschDauer(buslinien));
     }  
 
-    @Test
+        @Test
     public void busfahrerTauschenGeschichtenNachMehrerenRundenAus() {
         BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
         int[][] buslinien = {{1, 4, 7}, {2, 4, 6}, {3, 5, 7}};
