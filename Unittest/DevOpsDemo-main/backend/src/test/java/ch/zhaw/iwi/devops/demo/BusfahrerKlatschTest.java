@@ -66,6 +66,15 @@ public class BusfahrerKlatschTest {
         // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
         assertEquals("Nur ein Busfahrer", klatsch.berechneAustauschDauer(buslinien));
     } 
+
+    @Test
+    public void keineSchneidendeLinine() {
+        BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
+        int[][] buslinien = {{11, 14, 17}, {22, 24, 26}, {33, 35, 39}};
+        // Annahme: Die Methode gibt die Runde zurück, in der der letzte Austausch stattfindet,
+        // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
+        assertEquals("Kein Austausch möglich", klatsch.berechneAustauschDauer(buslinien));
+    }  
     
 
 
