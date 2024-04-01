@@ -57,6 +57,15 @@ public class BusfahrerKlatschTest {
         // Überprüfen, ob "Zeitüberschreitung" zurückgegeben wird, da der Austausch länger als 480 Minuten dauert
         assertEquals("Zeitüberschreitung", klatsch.berechneAustauschDauer(buslinien));
     }
+
+    @Test
+    public void nureinBusfahrer() {
+        BusfahrerKlatsch klatsch = new BusfahrerKlatsch();
+        int[] buslinien = {1, 4, 7};
+        // Annahme: Die Methode gibt die Runde zurück, in der der letzte Austausch stattfindet,
+        // unter Berücksichtigung der Wiederholung der Routen und indirekter Austausche.
+        assertEquals("Nur ein Busfahrer", klatsch.berechneAustauschDauer(buslinien));
+    } 
     
 
 

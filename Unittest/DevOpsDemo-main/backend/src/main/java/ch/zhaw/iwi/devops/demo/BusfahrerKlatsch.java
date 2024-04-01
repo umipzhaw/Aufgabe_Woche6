@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Set;
 
 public class BusfahrerKlatsch {
+    public String berechneAustauschDauer(int[] buslinien) {
+        return "Nur ein Busfahrer";}
+        
     public String berechneAustauschDauer(int[][] buslinien) {
         if (buslinien.length == 2) { 
             for (int i = 0; i < buslinien[0].length; i++) {
